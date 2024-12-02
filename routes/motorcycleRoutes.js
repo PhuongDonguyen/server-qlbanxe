@@ -1,7 +1,8 @@
 const express = require('express');
-const { getAllMotorcycles } = require('../controllers/motorcycleController');
+const { getAllMotorcycles, getMotorcyclesByType } = require('../controllers/motorcycleController');
 const router = express.Router();
 
 router.get('/motorcycles', getAllMotorcycles);
+router.get('/motorcycles/:motorcycleType', getMotorcyclesByType);
 
 module.exports = router;
